@@ -1,7 +1,7 @@
 // pathモジュールを読み(output.pathに絶対パスを指定するため)
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const outputPath = path.resolve(__dirname, 'public');
+const outputPath = path.resolve(__dirname, 'docs');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
