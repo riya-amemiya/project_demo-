@@ -8,9 +8,14 @@
  * より詳しいコメントがついた網羅的なサンプルコードは https://github.com/TextAliveJp/textalive-app-basic にあります。
  * `script` タグで API を読み込むサンプルコードは https://github.com/TextAliveJp/textalive-app-script-tag にあります。
  */
-
-import { Player, Ease } from "textalive-app-api";
-
+//cssファイルの読み込み
+import './index.scss'
+//APIの読み込み
+import {
+  Player,
+  Ease
+} from "textalive-app-api";
+//Playerクラスのインスタンスを生成
 const player = new Player({
   app: {
     appAuthor: "Jun Kato",
@@ -46,7 +51,8 @@ function onAppReady(app) {
     rewindBtn.addEventListener("click", () => player.video && player.requestMediaSeek(0));
   }
   if (!app.songUrl) {
-    player.createFromSongUrl("http://www.youtube.com/watch?v=ygY2qObZv24");
+    //Youtubeから楽曲データを取得、データの作成
+    player.createFromSongUrl("https://www.youtube.com/watch?v=a-Nf3QUFkOU");
   }
 }
 

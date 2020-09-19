@@ -1,12 +1,13 @@
 {
-  "name": "textalive-app-phrase",
+  "name": "template",
   "private": true,
   "version": "1.0.0",
   "description": "発声中のフレーズと現在のビートの情報を表示する TextAlive App API のシンプルな作例",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --mode production",
+    "start": "yarn run build && webpack-dev-server --mode development --open",
     "dev": "parcel src/index.html --out-dir dev",
-    "build": "parcel build src/index.html --public-url ./ --out-dir docs --no-source-maps",
     "clean": "del-cli .cache dev docs"
   },
   "repository": {
@@ -23,11 +24,25 @@
   },
   "homepage": "https://github.com/TextAliveJp/textalive-app-phrase#readme",
   "dependencies": {
-    "textalive-app-api": "^0.1.1"
+    "@babel/cli": "^7.11.6",
+    "@babel/preset-react": "^7.10.4",
+    "html-webpack-plugin": "^4.4.1",
+    "textalive-app-api": "^0.1.1",
+    "webpack-dev-server": "^3.11.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "babel-loader": "^8.1.0",
+    "css-loader": "^4.3.0",
     "del-cli": "^3.0.1",
+    "mini-css-extract-plugin": "^0.11.2",
     "parcel-bundler": "^1.12.4",
-    "parcel-plugin-clean-dist": "0.0.6"
+    "parcel-plugin-clean-dist": "0.0.6",
+    "sass": "^1.26.11",
+    "sass-loader": "^10.0.2",
+    "style-loader": "^1.2.1",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^3.3.12"
   }
 }
