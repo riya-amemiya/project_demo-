@@ -7,8 +7,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "yarn run build && webpack-dev-server --mode development --open",
-    "dev": "parcel src/index.html --out-dir dev",
-    "clean": "del-cli .cache dev docs"
+    "setup": "npm uninstall *  && rm package.json && npm init -y && npm i @babel/cli @babel/cli @babel/core @babel/preset-env babel-loader html-webpack-plugin webpack webpack-cli webpack-dev-server css-loader style-loader style-loader css-loader sass-loader sass textalive-app-api del-cli mini-css-extract-plugin parcel-bundler parcel-plugin-clean-dist --save-dev"
   },
   "repository": {
     "type": "git",
